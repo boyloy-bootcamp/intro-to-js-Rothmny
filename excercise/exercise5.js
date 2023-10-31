@@ -18,7 +18,14 @@ console.log(smallest2); // Output: 3
  */
 
 function findSmallest(numbers) {
-  // Your code here
+  
+  let temp = numbers[0];
+  for (let i=1; i<numbers.length; i++){
+    if (temp > numbers[i]){
+      temp= numbers[i];
+    }
+  }
+  return temp;
 }
 
 module.exports = findSmallest;
